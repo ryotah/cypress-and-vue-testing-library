@@ -14,7 +14,7 @@ export default {
   css: [],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [],
+  plugins: ['@/plugins/validator.ts'],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
@@ -29,5 +29,9 @@ export default {
   modules: [],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: {},
+  // Build Configuration (https://go.nuxtjs.dev/config-build)
+  build: {
+    // https://logaretm.github.io/vee-validate/guide/rules.html#importing-rules-in-nuxt-js
+    transpile: ['vee-validate/dist/rules'],
+  },
 }
