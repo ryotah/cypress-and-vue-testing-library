@@ -4,6 +4,35 @@ Test execution time comparison of Cypress and vue-testing-library.
 
 <img width="1485" alt="Screen Shot 2020-12-17 at 15 50 39" src="https://user-images.githubusercontent.com/1491961/102453638-f62b7700-407f-11eb-9d14-4e4af296dcb1.png">
 
+You can compare the execution time of Cypress and vue-testing-library. The application is simple. It is built by nuxt.js and it has a form with some validations.
+
+The test case is the below.
+
+```js
+describe('Form', () => {
+  it('should work', () => {
+    cy.visit('/form')
+
+    // Submit
+    cy.findByText('Submit').click()
+    cy.findByText('E-mail is not valid.')
+    cy.findByText('First Name is not valid.')
+    cy.findByText('Last Name is not valid.')
+
+    // Update
+    cy.findByTestId('email').type('foo@bar.com')
+    cy.findByTestId('first-name').type('Foo')
+    cy.findByTestId('last-name').type('Bar')
+
+    // Submit again
+    cy.findByText('Submit').click()
+    cy.findByText('Submitted! foo@bar.com')
+  })
+})
+```
+
+This test is very simple and it's not enough to measure the test execution time, so I recommend to duplicate it a lot before measuring. You can easily do it with npm script (`npm run bulk`).
+
 ## Setup
 
 ```bash
