@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "nuxt-ts",
+    "cypress": "cypress",
+    "cypress:open": "cypress open",
     "build": "nuxt-ts build",
     "start": "nuxt-ts start",
     "generate": "nuxt-ts generate",
@@ -14,7 +16,8 @@
   "dependencies": {
     "@nuxt/typescript-runtime": "^2.0.0",
     "core-js": "^3.6.5",
-    "nuxt": "^2.14.6"
+    "nuxt": "^2.14.6",
+    "vee-validate": "^3.4.5"
   },
   "devDependencies": {
     "@nuxt/types": "^2.14.6",
@@ -22,10 +25,14 @@
     "@nuxtjs/eslint-config": "^3.1.0",
     "@nuxtjs/eslint-config-typescript": "^3.0.0",
     "@nuxtjs/eslint-module": "^2.0.0",
+    "@testing-library/cypress": "^7.0.3",
+    "@testing-library/jest-dom": "^5.11.6",
+    "@testing-library/vue": "^5.6.1",
     "@vue/test-utils": "^1.1.0",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.5.0",
+    "cypress": "^6.1.0",
     "eslint": "^7.10.0",
     "eslint-config-prettier": "^6.12.0",
     "eslint-plugin-nuxt": "^1.0.0",

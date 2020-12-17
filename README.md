@@ -1,4 +1,4 @@
-# cypress-and-vue-testing-library
+# Cypress and vue-testing-library
 
 ## Build Setup
 
